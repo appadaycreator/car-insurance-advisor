@@ -1,8 +1,9 @@
 {
   "name": "Car Insurance Advisor",
   "short_name": "car-insuranc",
-  "start_url": "/",
+  "start_url": "/car-insurance-advisor/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/car-insurance-advisor/"
 }
