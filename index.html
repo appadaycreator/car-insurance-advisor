@@ -238,6 +238,13 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .v2mini .m.g .b{background:var(--green,#16a34a);}
         .v2mini .m.o .b{background:var(--accent);}
 
+        .v2hero-visual{position:relative;}
+        .v2hero-photo{width:100%;height:300px;object-fit:cover;border-radius:20px;box-shadow:0 20px 50px rgba(30,58,138,.26);}
+        .v2hero-card{position:relative;margin:-56px 16px 0;background:#fff;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 16px 40px rgba(30,58,138,.22);padding:16px 18px;}
+        .v2hc-head{display:flex;align-items:center;gap:6px;font-size:.78rem;font-weight:700;color:var(--primary-dark);margin-bottom:7px;}
+        .v2hc-head img{width:15px;height:15px;}
+        .v2hc-plan{display:inline-block;background:var(--primary);color:#fff;font-size:.74rem;font-weight:800;padding:3px 10px;border-radius:6px;margin-bottom:6px;}
+
         .v2sec{max-width:1080px;margin:0 auto;padding:54px 20px;}
         .v2sectitle{text-align:center;font-size:1.55rem;font-weight:900;color:#0f172a;margin:0 0 6px;letter-spacing:-.3px;}
         .v2sectitle .em{color:var(--primary);}
@@ -320,20 +327,17 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
                     <a href="lp/" class="v2btn-ghost">サービス紹介を見る</a>
                 </div>
             </div>
-            <div>
-                <div class="v2prev">
-                    <div class="v2prev-head"><img src="assets/icons/split/02-03.png" alt="">診断結果プレビュー</div>
-                    <div class="v2prev-photo" style="background-image:url('assets/photos/photo_01.jpg');">
-                        <span class="tg">バランス型プラン</span>
-                    </div>
-                    <div class="v2prev-body">
-                        <div class="v2prev-price"><span class="big">¥4,800</span><span class="u">/月</span></div>
-                        <div class="v2prev-year">年間 約 ¥57,600（目安）</div>
-                        <div class="v2mini">
-                            <div class="m g"><div class="nm">節約重視</div><div class="pr">¥38,400</div><a href="#quiz-start" class="b">見る</a></div>
-                            <div class="m on"><div class="nm">バランス型</div><div class="pr">¥57,600</div><a href="#quiz-start" class="b">見る</a></div>
-                            <div class="m o"><div class="nm">手厚い補償</div><div class="pr">¥82,800</div><a href="#quiz-start" class="b">見る</a></div>
-                        </div>
+            <div class="v2hero-visual">
+                <img class="v2hero-photo" src="assets/photos/photo_01.jpg" alt="家族みんなで安心して車に乗るイメージ">
+                <div class="v2hero-card">
+                    <div class="v2hc-head"><img src="assets/icons/split/02-03.png" alt="">あなたへのおすすめ診断結果</div>
+                    <span class="v2hc-plan">バランス型プラン</span>
+                    <div class="v2prev-price"><span class="big">¥4,800</span><span class="u">/月</span></div>
+                    <div class="v2prev-year">年間 約 ¥57,600（目安）</div>
+                    <div class="v2mini">
+                        <div class="m g"><div class="nm">節約重視</div><div class="pr">¥38,400</div><a href="#quiz-start" class="b">見る</a></div>
+                        <div class="m on"><div class="nm">バランス型</div><div class="pr">¥57,600</div><a href="#quiz-start" class="b">見る</a></div>
+                        <div class="m o"><div class="nm">手厚い補償</div><div class="pr">¥82,800</div><a href="#quiz-start" class="b">見る</a></div>
                     </div>
                 </div>
             </div>

@@ -92,6 +92,22 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .preview-row span:first-child{color:var(--muted);}
         .preview-row span:last-child{font-weight:700;}
 
+        /* Hero visual (big family photo + floating result card) */
+        .hero-visual{position:relative;}
+        .hero-photo{width:100%;height:404px;object-fit:cover;border-radius:22px;box-shadow:0 22px 54px rgba(30,58,138,.28);}
+        .hero-result{position:absolute;left:18px;bottom:18px;width:228px;background:rgba(255,255,255,.97);backdrop-filter:blur(2px);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 38px rgba(30,58,138,.26);padding:15px 17px;}
+        .hr-head{display:flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;color:var(--primary-dark);margin-bottom:7px;}
+        .hr-head img{width:15px;height:15px;}
+        .hr-plan{display:inline-block;background:var(--primary);color:#fff;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:6px;margin-bottom:8px;}
+        .hr-price{display:flex;align-items:baseline;gap:4px;}
+        .hr-price .big{font-size:2rem;font-weight:900;color:var(--primary);line-height:1;}
+        .hr-price .unit{font-size:.85rem;color:var(--muted);font-weight:700;}
+        .hr-year{font-size:.74rem;color:var(--muted);margin-bottom:9px;}
+        .hr-rows{list-style:none;border-top:1px dashed var(--line);padding-top:8px;display:flex;flex-direction:column;gap:5px;}
+        .hr-rows li{display:flex;justify-content:space-between;font-size:.76rem;}
+        .hr-rows li span:first-child{color:var(--muted);}
+        .hr-rows li span:last-child{font-weight:700;color:#0f172a;}
+
         /* Section base */
         section{padding:62px 0;}
         .sec-light{background:var(--bg);}
@@ -211,6 +227,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
             .steps{grid-template-columns:repeat(2,1fr);row-gap:30px;}
             .gallery{grid-template-columns:repeat(4,1fr);}
             .hero h1{font-size:1.85rem;}
+            .hero-photo{height:300px;}
             .sec-title{font-size:1.4rem;}
             section{padding:48px 0;}
         }
@@ -256,22 +273,18 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
                 <a href="#plans" class="btn-ghost">診断結果の例を見る</a>
             </div>
         </div>
-        <div>
-            <div class="preview-card">
-                <div class="preview-head"><img src="../assets/icons/split/02-03.png" alt="">診断結果プレビュー</div>
-                <div class="preview-photo" style="background-image:url('../assets/photos/photo_01.jpg');">
-                    <span class="tag">バランス型プラン</span>
-                </div>
-                <div class="preview-body">
-                    <div class="preview-price"><span class="big">¥4,800</span><span class="unit">/月</span></div>
-                    <div class="preview-year">年間 約 ¥57,600（目安）</div>
-                    <div class="preview-rows">
-                        <div class="preview-row"><span>対人・対物賠償</span><span>無制限</span></div>
-                        <div class="preview-row"><span>人身傷害補償</span><span>3,000万円</span></div>
-                        <div class="preview-row"><span>車両保険</span><span>あり（免責5万）</span></div>
-                        <div class="preview-row"><span>ロードサービス</span><span>付帯</span></div>
-                    </div>
-                </div>
+        <div class="hero-visual">
+            <img class="hero-photo" src="../assets/photos/photo_01.jpg" alt="家族みんなで安心して車に乗るイメージ">
+            <div class="hero-result">
+                <div class="hr-head"><img src="../assets/icons/split/02-03.png" alt="">あなたへのおすすめ</div>
+                <span class="hr-plan">バランス型プラン</span>
+                <div class="hr-price"><span class="big">¥4,800</span><span class="unit">/月</span></div>
+                <div class="hr-year">年間 約 ¥57,600（目安）</div>
+                <ul class="hr-rows">
+                    <li><span>対人・対物賠償</span><span>無制限</span></li>
+                    <li><span>車両保険</span><span>あり（免責5万）</span></li>
+                    <li><span>ロードサービス</span><span>付帯</span></li>
+                </ul>
             </div>
         </div>
     </div>
