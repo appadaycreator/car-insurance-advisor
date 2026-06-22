@@ -60,8 +60,9 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         @media(max-width:840px){.nav{display:none;}}
 
         /* Hero */
-        .hero{background:linear-gradient(160deg,#eff6ff 0%,#dbeafe 55%,#bfdbfe 100%);position:relative;overflow:hidden;padding:56px 0 64px;}
-        .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+        .hero{background:linear-gradient(160deg,#eff6ff 0%,#dbeafe 55%,#bfdbfe 100%);position:relative;overflow:hidden;padding:64px 0 78px;}
+        .hero::before{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.12),transparent 70%);pointer-events:none;}
+        .hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:50px;align-items:center;position:relative;z-index:1;}
         .hero-badge{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--primary-dark);font-weight:700;font-size:.8rem;padding:6px 14px;border-radius:999px;box-shadow:0 2px 8px rgba(37,99,235,.15);margin-bottom:18px;}
         .hero h1{font-size:2.35rem;font-weight:900;line-height:1.32;letter-spacing:-.5px;color:#0f172a;margin-bottom:6px;}
         .hero h1 .em{color:var(--primary);}
@@ -94,8 +95,8 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
         /* Hero visual (big family photo + floating result card) */
         .hero-visual{position:relative;}
-        .hero-photo{width:100%;height:404px;object-fit:cover;border-radius:22px;box-shadow:0 22px 54px rgba(30,58,138,.28);}
-        .hero-result{position:absolute;left:18px;bottom:18px;width:228px;background:rgba(255,255,255,.97);backdrop-filter:blur(2px);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 38px rgba(30,58,138,.26);padding:15px 17px;}
+        .hero-photo{width:100%;height:460px;object-fit:cover;border-radius:24px;box-shadow:0 26px 60px rgba(30,58,138,.30);}
+        .hero-result{position:absolute;left:20px;bottom:20px;width:250px;background:rgba(255,255,255,.97);backdrop-filter:blur(2px);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 42px rgba(30,58,138,.28);padding:17px 19px;}
         .hr-head{display:flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;color:var(--primary-dark);margin-bottom:7px;}
         .hr-head img{width:15px;height:15px;}
         .hr-plan{display:inline-block;background:var(--primary);color:#fff;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:6px;margin-bottom:8px;}
@@ -109,7 +110,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .hr-rows li span:last-child{font-weight:700;color:#0f172a;}
 
         /* Section base */
-        section{padding:62px 0;}
+        section{padding:74px 0;}
         .sec-light{background:var(--bg);}
         .sec-blue{background:linear-gradient(180deg,#f0f7ff,#e0efff);}
         .sec-title{text-align:center;font-size:1.7rem;font-weight:900;color:#0f172a;margin-bottom:8px;letter-spacing:-.3px;}
@@ -148,13 +149,15 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 
         /* Plan comparison */
         .plans{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;}
-        .chart-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 6px 20px rgba(15,23,42,.06);}
-        .chart-card h3{font-size:1rem;font-weight:800;margin-bottom:18px;color:#0f172a;}
-        .bars{display:flex;align-items:flex-end;gap:26px;height:200px;border-bottom:2px solid var(--line);padding:0 10px;}
+        .chart-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 28px;box-shadow:0 10px 30px rgba(37,99,235,.10);}
+        .chart-card h3{font-size:1.08rem;font-weight:800;margin-bottom:14px;color:#0f172a;}
+        .save-note{background:#ecfdf5;border:1px solid #bbf7d0;color:#15803d;font-size:.86rem;font-weight:700;padding:9px 14px;border-radius:10px;margin-bottom:24px;}
+        .save-note b{color:var(--green);font-size:.96rem;}
+        .bars{display:flex;align-items:flex-end;gap:30px;height:270px;border-bottom:2px solid var(--line);padding:0 12px;}
         .bar-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;}
-        .bar{width:100%;border-radius:8px 8px 0 0;position:relative;}
-        .bar .val{position:absolute;top:-22px;left:0;right:0;text-align:center;font-size:.82rem;font-weight:800;color:#0f172a;}
-        .bar-col .lb{margin-top:8px;font-size:.78rem;color:var(--muted);font-weight:600;text-align:center;}
+        .bar{width:100%;border-radius:10px 10px 0 0;position:relative;box-shadow:0 6px 16px rgba(15,23,42,.12);}
+        .bar .val{position:absolute;top:-26px;left:0;right:0;text-align:center;font-size:.9rem;font-weight:900;color:#0f172a;}
+        .bar-col .lb{margin-top:10px;font-size:.84rem;color:#334155;font-weight:700;text-align:center;}
         .plan-cards{display:flex;flex-direction:column;gap:14px;}
         .plan{border:2px solid var(--line);border-radius:14px;padding:16px 18px;background:#fff;position:relative;}
         .plan.green{border-color:#bbf7d0;}
@@ -439,6 +442,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         <div class="plans">
             <div class="chart-card">
                 <h3>プラン別 年間保険料の目安</h3>
+                <div class="save-note">節約重視プランなら手厚い補償プランより<b>年間 約 ¥44,400</b> 抑えられる目安</div>
                 <div class="bars">
                     <div class="bar-col"><div class="bar" style="height:46%;background:var(--green);"><span class="val">¥38,400</span></div><div class="lb">節約重視</div></div>
                     <div class="bar-col"><div class="bar" style="height:70%;background:var(--primary);"><span class="val">¥57,600</span></div><div class="lb">バランス型</div></div>
